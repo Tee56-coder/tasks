@@ -38,7 +38,7 @@ let pal = ['mom', 'dad', 'did', 'racecar']
 //     }
 // }
 
-const palindrome = str => str.split('').reverse().join('') === str ? str : console.log('Not a Palindrome!');
+// const palindrome = str => str.split('').reverse().join('') === str ? str : console.log('Not a Palindrome!');
 
 console.log(palindrome('bob'));
 
@@ -100,10 +100,14 @@ function fizzBuzz(fz) {
 // }
 
 function removeDuplicates(arr) {
-    const uniqueSet = new Set(arr);
-    return Array.from(uniqueSet);
+  const uniqueSet = new Set(arr);
+  return Array.from(uniqueSet);
 }
 console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5]));
+
+
+
+
 
 
 
@@ -129,3 +133,150 @@ function toCamelCase(str) {
 
 
 console.log(toCamelCase("convert this string to camel case"));
+
+
+
+
+
+
+
+
+
+
+
+
+// 2. Find the Maximum Number: Write a function that takes an array of numbers as input and returns the largest number.
+
+// 3. Check if a Number is Even: Write a function that takes a number as input and returns true if it's even, false if it's odd.
+
+// 4. Sum of an Array: Write a function that takes an array of numbers as input and returns the sum of all numbers.
+
+// 5. Find the First Duplicate: Write a function that takes an array of numbers as input and returns the first duplicate number.
+
+// 6. Check if a String is a Palindrome: Write a function that takes a string as input and returns true if it's a palindrome, false if it's not.
+
+// 7. Find the Longest Word: Write a function that takes a string as input and returns the longest word.
+
+// 8. Count the Number of Vowels: Write a function that takes a string as input and returns the number of vowels.
+
+// 9. Check if a Number is a Prime Number: Write a function that takes a number as input and returns true if it's a prime number, false if it's not.
+
+// 10. Sort an Array in Ascending Order: Write a function that takes an array of numbers as input and returns the sorted array in ascending order.
+
+
+// number 2
+// const num = [100, 444, 9, 0];
+// function findMaxNo(arr) {
+//   if(arr.length === 0){
+//     return null
+//   }
+//   let maxNo = arr[0]
+//   for(let i = 1; i < arr.length; i++){
+//     if (arr[i] > maxNo) {
+//       maxNo = arr[i];
+//   }
+//   }
+//   return maxNo;
+// }
+
+// console.log(findMaxNo(num))
+
+// number 3
+// function evenCheck(num) {
+//   if(num % 2 === 0){
+//       return 'number is even'
+//   } else{
+//       return 'it is odd'
+//   }
+// }
+
+console.log(evenCheck(8))
+
+// // number 4
+
+const num = [6, 9, 0, 8, 32]
+function sumArray(arr) {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+console.log(sumArray(num));
+
+// number 5 
+function removeDuplicates(arr) {
+  const uniqueSet = new Set(arr);
+  return Array.from(uniqueSet);
+}
+console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5]));
+
+// number 6
+const palindrome = str => str.split('').reverse().join('') === str ? str : console.log('Not a Palindrome!');
+
+
+// number 7
+// let txt = 'i dey work oh!!';
+
+// function findLongestWord(str) {
+//   const words = str.split('');
+//   let longestWord = "";
+//   for (let word of words){
+//     if(word.length < longestWord.length){
+//       longestWord = word
+//     }
+//   }
+//   return longestWord;
+// }
+
+
+// const longestWord = findLongestWord(txt);
+// console.log("the longest word is " longestWord);
+
+
+
+// function findLongestWord(inputString) {
+//   const words = inputString.split(' ');
+//   let longestWord = "";
+//   for (let word of words) {
+//       if (word.length > longestWord.length) {
+//           longestWord = word;
+//       }
+//   }
+//   return longestWord;
+// }
+const txt = "Write a function that takes a string as input and returns the longest word";
+function findLongestWord(str) {
+  const words = str.split(' ');
+  let longestWord = "";
+  for (let word of words) {
+      if (word.length > longestWord.length) {
+          longestWord = word;
+      }
+  }
+  return longestWord;
+}
+const longestWord = findLongestWord(txt);
+console.log("The longest word is:", longestWord);
+
+
+
+// number 7
+const inputString = "Write a function that takes a string as input and returns the number of vowels"
+function countVowels(inputString) {
+  const vowels = 'aeiouAEIOU';
+  let vowelCount = 0;
+  for (let char of inputString) {
+      if (vowels.includes(char)) {
+          vowelCount++;
+      }
+  }
+
+  return vowelCount;
+}
+
+// Example usage
+const numberOfVowels = countVowels(inputString);
+console.log("The number of vowels is:", numberOfVowels);
+
