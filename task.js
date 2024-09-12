@@ -164,6 +164,11 @@ console.log(toCamelCase("convert this string to camel case"));
 // 10. Sort an Array in Ascending Order: Write a function that takes an array of numbers as input and returns the sorted array in ascending order.
 
 
+
+
+
+
+
 // number 2
 // const num = [100, 444, 9, 0];
 // function findMaxNo(arr) {
@@ -280,3 +285,21 @@ function countVowels(inputString) {
 const numberOfVowels = countVowels(inputString);
 console.log("The number of vowels is:", numberOfVowels);
 
+// number 8
+    function isPrime(n) {
+      // Handle edge cases
+      if (n <= 1) {
+          return false;
+      }
+      
+      // Check divisibility from 2 to the square root of n
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) {
+              return false;
+          }
+      }
+      
+      return true;
+    }
+
+    const numReverse = num => num.split('').reverse().join('')
